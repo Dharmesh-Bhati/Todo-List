@@ -1,0 +1,18 @@
+# node_modules folder (React & Node)
+node_modules/
+
+# env files (for security)
+.env
+
+# build folder (React production build)
+client/dist/
+client/build/
+
+# logs
+*.log
+
+# system files
+.DS_Store
+
+# OS generated
+Thumbs.db

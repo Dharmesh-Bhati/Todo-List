@@ -1,0 +1,128 @@
+/* Todo Container */
+.todo-container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2c2f36; /* Dark background */
+    color: #f1f1f1; /* Light text for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  
+  /* Heading Style */
+  h2 {
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 24px;
+  }
+  
+  /* Todo List Item (Card Style) */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #343a40; /* Dark background for each list item */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow to create card effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect on List Item */
+  li:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  }
+  
+  /* Buttons */
+  button {
+    padding: 10px 14px;
+    margin: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4e73df; /* Dark Blue */
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2e59d9; /* Darker Blue */
+    transform: scale(1.05); /* Slight grow effect */
+  }
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #343a40;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .modal-input {
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #495057;
+    color: #f1f1f1;
+  }
+  
+  .modal-input::placeholder {
+    color: #ced4da;
+  }
+  
+  /* Modal Buttons */
+  .modal-save,
+  .modal-cancel {
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .modal-save {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .modal-cancel {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .modal-save:hover {
+    background-color: #218838;
+  }
+  
+  .modal-cancel:hover {
+    background-color: #c82333;
+  }
+  
