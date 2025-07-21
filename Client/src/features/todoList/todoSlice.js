@@ -1,23 +1,25 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 export const addTodos = createAsyncThunk('todos/addtodos',async({title}) => {
-  const res = await axios.post('http://localhost:8080/todo',{title})
+  const res = await axios.post(`${BASE_URL}/todo`,{title})
   return res.data
 })
 
 export const fetchTodos = createAsyncThunk('todos/fetchTodos', async() => {
-  const res = await axios.get('http://localhost:8080/todo')
+  const res = await axios.get(`${BASE_URL}/todo`)
   return res.data
 })
 
 export const deleteTodos = createAsyncThunk('/todos/deletetodos', async({id}) => {
-  const res = await axios.delete(`http://localhost:8080/todo/${id}`)
+  const res = await axios.delete(`${BASE_URL}/todo/${id}`)
   return res.data
 })
 
 export const updateTodos = createAsyncThunk('todos/updateTodos',async({id,title}) => {
-  const res = await axios.put(`http://localhost:8080/todo/${id}`,{title})
+  const res = await axios.put(`${BASE_URL}/todo/${id}`,{title})
   return res.data
 })
 export const todoSlice = createSlice({

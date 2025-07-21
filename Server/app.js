@@ -5,6 +5,7 @@ const cors = require('cors')
 const todoRoutes = require('./routes/todoRoutes')
 const dotenv = require('dotenv').config()
 
+const PORT = process.env.PORT || 8000
 app.use(express.json())
 app.use(cors({
    origin: ["http://localhost:5173", "https://mern-todo-list-hfm7.onrender.com"]
@@ -16,7 +17,12 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use('/todo',todoRoutes)
 
-app.listen(8080,()=>{
-    console.log('Server is listening on port 8080');
-    
-})
+app.get('/', (req, res) => {
+  res.send('Server is running');
+});
+
+
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
